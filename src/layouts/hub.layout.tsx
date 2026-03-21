@@ -23,7 +23,6 @@ const HubLayout = () => {
 
             {/* APP CONTAINER */}
             <div className="flex h-full overflow-hidden bg-background">
-
                 {/* SIDEBAR */}
                 <div className="p-4 bg-background">
                     <Sidebar isOpen={isOpenSideBar} />
