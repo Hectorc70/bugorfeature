@@ -1,9 +1,9 @@
 @import "tailwindcss";
 :root {
-  --colorPrimary: #AF8F6F;
-  --colorPrimaryHover: #AF8F6F;
+  --colorPrimary: #098978;
+  --colorPrimaryHover: #033730;
   --colorOnPrimary: #ffffff;
-  --background: #F5F2ED;
+  --background: #f1f4f9;
   --onBackground: #FFFFFF;
   --hintColor: #F7F7F7;
   --colorText: #3D3834;
@@ -50,4 +50,14 @@
 
 .delay-400 {
   animation-delay: 0.4s;
+}
+
+.card {
+  background: var(--onBackground);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+.card:hover {
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
 }

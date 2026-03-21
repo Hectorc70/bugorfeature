@@ -19,7 +19,7 @@ const HubLayout = () => {
     // };
 
     return (
-        <div className="relative flex h-screen w-screen bg-background m-0 overflow-hidden text-onPrimary">
+        <div className="relative flex h-screen w-screen bg-background m-0 overflow-hidden text-onPrimary p-2">
 
             {/* Overlay (tablet ↓) */}
             {true && (
@@ -34,7 +34,6 @@ const HubLayout = () => {
                 className={`
                     fixed lg:relative z-50 h-screen
                     transition-all duration-300 ease-in-out
-                    bg-primary shadow-xl lg:shadow-none border-r border-white/10
                     ${isOpenSideBar ? "translate-x-0" : "-translate-x-full"}
                     lg:translate-x-0
                     ${isOpenSideBar ? "lg:w-52" : "lg:w-16"}
