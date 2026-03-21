@@ -1,25 +1,21 @@
 import { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
-import { Outlet, useNavigate } from "react-router";
-import { TiThMenu } from "react-icons/ti";
-import { Toaster } from "sileo";
+import { Outlet } from "react-router";
 
 
 const HubLayout = () => {
     //Persisten entre renders
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     // const isOpenSideBar = useSelector((state: RootState) => state.global.isOpenSidebar);
     const [isOpenSideBar, setIsOpenSideBar] = useState(true);
-    const [showPushModal, setShowPushModal] = useState(false);
-    const [showPushDeniedModal, setShowPushDeniedModal] = useState(false);
 
-    // const onOpenSideBAr = () => {
-    //     dispatch(openOrCloseSidebar());
-    // };
+    const onOpenSideBAr = () => {
+        setIsOpenSideBar(!isOpenSideBar);
+    };
 
     return (
-        <div className="h-screen w-screen bg-background">
+        <div className="h-screen w-screen bg-background " onClick={onOpenSideBAr}>
 
             {/* APP CONTAINER */}
             <div className="flex h-full overflow-hidden bg-background">

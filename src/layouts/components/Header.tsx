@@ -1,20 +1,16 @@
-import type { AppDispatch, RootState } from "@/redux/store";
 import { AiFillBell } from "react-icons/ai";
-import { TiThMenu } from "react-icons/ti";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router";
 
 const Header: React.FC = () => {
     // const location = useLocation();
-    const dispatch = useDispatch<AppDispatch>();
+    // const dispatch = useDispatch<AppDispatch>();
 
-    const navigate = useNavigate()
-    const handleGoBack = () => {
+    // const navigate = useNavigate()
+    // const handleGoBack = () => {
 
-        if (window.history.length > 1) {
-            navigate(-1);
-        }
-    };
+    //     if (window.history.length > 1) {
+    //         navigate(-1);
+    //     }
+    // };
     return (
         <header className="bg-background px-6 py-4 flex items-center justify-end">
             <div className="flex items-center gap-4">

@@ -1,6 +1,5 @@
 import { Outlet } from "react-router";
 import background from "@/assets/bug-or-feature-2.png";
-import logo from "@/assets/valanza-logo-large.png";
 
 const AuthLayout = () => {
   return (

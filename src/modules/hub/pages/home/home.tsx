@@ -4,7 +4,7 @@
 import { Button } from "@/common/components/button";
 import type { IProject } from "@/models/project.model";
 import { AiFillFolder } from "react-icons/ai";
-import { FaBug, FaCircle, FaDotCircle, FaUsers } from "react-icons/fa";
+import { FaBug, FaDotCircle, FaUsers } from "react-icons/fa";
 
 const HomePage: React.FC = () => {
   const projects: IProject[] = [

@@ -1,10 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { routeNames } from "./routes-names";
-import AuthLayout from "@/modules/auth/layout/auth.layout";
-import LoginPage from "@/modules/auth/pages/login/login";
-import RegisterPage from "@/modules/auth/pages/register/register";
 import NotFoundPage from "@/layouts/components/NotFound";
-import RequireAuth from "@/hooks/authguard";
 import HubLayout from "@/layouts/hub.layout";
 import HomePage from "@/modules/hub/pages/home/home";
 
