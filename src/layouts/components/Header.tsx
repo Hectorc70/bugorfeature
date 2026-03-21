@@ -26,8 +26,10 @@ const Header: React.FC = () => {
             </div> */}
 
             <div className="flex items-center gap-4">
-                <AiFillBell />
-                <div className="w-8 h-8 rounded-full bg-gray-300" />
+                <AiFillBell className="cursor-pointer text-colorText" />
+                <div className="w-8 h-8 rounded-full bg-linear-to-br  from-[#466fdf] to-[#25408a] flex items-center justify-center" >
+                    <span className="text-onPrimary text-sm">HG</span>
+                </div>
             </div>
         </header>
     );

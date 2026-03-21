@@ -48,13 +48,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
     `}
         >
             {/* LOGO */}
-            <div className="px-4 py-5 flex items-center gap-3">
-                <img src={logo} alt="logo" className="w-8 h-8 object-contain" />
-                {isOpen && (
+            <div className=" flex flex-col items-center justify-center">
+                <img src={logo} alt="logo" className="w-40  object-cover" />
+                {/* {isOpen && (
                     <span className="font-semibold text-sm tracking-wide text-colorText">
                         Bug or Feature
                     </span>
-                )}
+                )} */}
             </div>
 
             {/* MAIN NAV */}
@@ -63,7 +63,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
                     to={routeNames.homePage}
                     className={({ isActive }) =>
                         `flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition
-        ${isActive
+                            ${isActive
                             ? "bg-[var(--colorPrimary)]/10 text-[var(--colorPrimary)] font-medium"
                             : "text-[var(--colorGrey)] hover:bg-[var(--colorHover)] hover:text-[var(--colorText)]"
                         }`

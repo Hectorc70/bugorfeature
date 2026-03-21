@@ -4,15 +4,16 @@
   --colorPrimaryHover: #076f61;
   --colorOnPrimary: #ffffff;
   --background: #f2f3f7;
-  --onBackground: #FFFFFF;
-  --hintColor: #F7F7F7;
-  --colorText: #3D3834;
+  --onBackground: #ffffff;
+  --hintColor: #f7f7f7;
+  --colorText: #3d3834;
   --colorGrey: #898989;
-  --colorHover: #EDE8E2
+  --colorHover: #ede8e2;
+  --font-display: "Poppins", sans-serif;
 }
 
 @theme {
-  --font-display: "Inter", sans-serif;
+  --font-display: var(--font-display);
   --color-background: var(--background);
   --color-onBackground: var(--onBackground);
   --color-hintColor: var(--hintColor);
@@ -22,10 +23,9 @@
   --color-onPrimary: var(--colorOnPrimary);
   --color-colorGrey: var(--colorGrey);
 
-  --color-colorText:  var(--colorText);
+  --color-colorText: var(--colorText);
   --color-colorHover: var(--colorHover);
 }
-
 
 /* LOADER CSS */
 @keyframes bubble {
@@ -55,7 +55,7 @@
 .card {
   background: var(--onBackground);
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 .card:hover {
   transform: translateY(-2px);
