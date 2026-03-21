@@ -41,12 +41,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
     return (
         <aside
             className={`
-    h-screen flex flex-col
-    bg-onBackground rounded-xl shadow-sm
-    border border-gray-100
-    transition-all duration-300 ease-in-out
-    ${isOpen ? "lg:w-60" : "lg:w-20"}
-  `}
+        h-full flex flex-col
+        bg-onBackground rounded-xl
+        transition-all duration-300 ease-in-out
+        ${isOpen ? "lg:w-60" : "lg:w-20"}
+    `}
         >
             {/* LOGO */}
             <div className="px-4 py-5 flex items-center gap-3">
@@ -100,7 +99,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
                         to={module.route}
                         className={({ isActive }) =>
                             `flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition
-          ${isActive
+                        ${isActive
                                 ? "bg-[var(--colorPrimary)]/10 text-[var(--colorPrimary)] font-medium"
                                 : "text-[var(--colorGrey)] hover:bg-[var(--colorHover)] hover:text-[var(--colorText)]"
                             }`
@@ -118,7 +117,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
                 <button
                     onClick={signOut}
                     className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm
-      text-[var(--colorGrey)] hover:bg-[var(--colorHover)] hover:text-[var(--colorText)] transition"
+                    text-[var(--colorGrey)] hover:bg-[var(--colorHover)] hover:text-[var(--colorText)] transition"
                 >
                     <FaSignOutAlt />
                     {isOpen && <span>Cerrar sesión</span>}

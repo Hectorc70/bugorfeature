@@ -3,7 +3,7 @@ import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import { Outlet, useNavigate } from "react-router";
 import { TiThMenu } from "react-icons/ti";
-import {Toaster } from "sileo";
+import { Toaster } from "sileo";
 
 
 const HubLayout = () => {
@@ -19,53 +19,31 @@ const HubLayout = () => {
     // };
 
     return (
-        <div className="relative flex h-screen w-screen bg-background m-0 overflow-hidden text-onPrimary p-2">
+        <div className="h-screen w-screen bg-background">
 
-            {/* Overlay (tablet ↓) */}
-            {true && (
-                <div
-                    className="fixed inset-0 bg-black/40 z-40 lg:hidden"
-                    onClick={() => {}}
-                />
+            {/* APP CONTAINER */}
+            <div className="flex h-full overflow-hidden bg-background">
 
-            )}
-            {/* Sidebar */}
-            <div
-                className={`
-                    fixed lg:relative z-50 h-screen
-                    transition-all duration-300 ease-in-out
-                    ${isOpenSideBar ? "translate-x-0" : "-translate-x-full"}
-                    lg:translate-x-0
-                    ${isOpenSideBar ? "lg:w-52" : "lg:w-16"}
-                    w-64 lg:w-auto
-                `}
-            >
-                <div
-                    className="p-4 cursor-pointer w-full flex items-center justify-center lg:hidden"
-                    onClick={() => setIsOpenSideBar(!isOpenSideBar)}
-                >
-                    <TiThMenu className="text-xl text-onPrimary" />
+                {/* SIDEBAR */}
+                <div className="p-4 bg-background">
+                    <Sidebar isOpen={isOpenSideBar} />
                 </div>
 
-                <Sidebar isOpen={isOpenSideBar} />
-            </div>
-            {/* Main Content */}
-            <div className={`
-                    flex-1 min-w-0 flex flex-col bg-background
-                    lg:mr-3 lg:my-3
-                    rounded-none lg:rounded-2xl
-                    p-2
-                    ${isOpenSideBar ? "pointer-events-none lg:pointer-events-auto" : ""}
-                `}>
-                <Header />
+                {/* RIGHT SIDE */}
+                <div className="flex-1 flex flex-col bg-background pb-4 pr-4">
 
-                <main className="flex-1 p-2 overflow-hidden w-full h-full bg-hintColor rounded-2xl bg-red">
-                    <Toaster position="top-right" />
-                    <Outlet />
-                </main>
-            </div>
-        </div >
+                    {/* HEADER */}
+                    <Header />
 
+                    {/* CONTENT */}
+                    <main className="bg-onBackground rounded-2xl w-full h-full p-4 overflow-auto">
+                        <Outlet />
+                    </main>
+
+
+                </div>
+            </div>
+        </div>
     );
 };
 
