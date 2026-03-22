@@ -1,6 +1,7 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import AdBanner from "@/common/components/adsense-banner";
 import { Button } from "@/common/components/button";
 import type { IProject } from "@/models/project.model";
 import { AiFillFolder } from "react-icons/ai";
@@ -106,6 +107,7 @@ const HomePage: React.FC = () => {
           <FaUsers className="text-lg" />
         </div>
       </div>
+      <AdBanner />
       <div className="flex items-center justify-between mb-4">
         <div>
           <h2 className="text-lg font-semibold text-colorText">
